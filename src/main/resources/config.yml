@@ -1,0 +1,97 @@
+# NextDungeons Configuration File
+# Version 1.0.0
+
+# General Settings
+general:
+  prefix: '&8[&6NextDungeons&8] '
+  dungeon-world: 'dungeons_world'
+  auto-create-world: true
+  default-gamemode: ADVENTURE
+
+# Dungeon Settings
+dungeons:
+  max-active-per-player: 1
+  auto-delete-on-exit: true
+  save-player-inventory: true
+  respawn-on-death: true
+  death-penalty: 0.0
+
+# Party Settings
+party:
+  enabled: true
+  max-members: 5
+  friendly-fire: false
+  shared-rewards: true
+  require-party-for-multiplayer: true
+
+# Cooldown Settings (in seconds)
+cooldowns:
+  enabled: true
+  global: 300
+  per-dungeon: true
+
+# Time Limits (in seconds, -1 for no limit)
+time-limits:
+  enabled: true
+  default: 1800
+  warning-time: 300
+
+# Rewards Settings
+rewards:
+  economy:
+    enabled: true
+    multiplier: 1.0
+  experience:
+    enabled: true
+    multiplier: 1.0
+  items:
+    enabled: true
+
+# Chest Settings
+chests:
+  respawn-on-reset: true
+  particle-effects: true
+  open-sound: BLOCK_CHEST_OPEN
+  restock-cooldown: 0
+
+# Integration Settings
+integrations:
+  vault:
+    enabled: true
+    economy-rewards: true
+  placeholderapi:
+    enabled: true
+  mythicmobs:
+    enabled: true
+    boss-announcements: true
+  cmi:
+    enabled: true
+  fawe:
+    enabled: true
+    async-paste: true
+
+# GUI Settings
+gui:
+  enabled: true
+  title: '&6&lDungeons Menu'
+  rows: 3
+  fill-empty: true
+  fill-material: GRAY_STAINED_GLASS_PANE
+
+# Messages
+messages:
+  dungeon-enter: '&aYou have entered the dungeon!'
+  dungeon-exit: '&cYou have left the dungeon!'
+  dungeon-complete: '&a&lDUNGEON COMPLETE!'
+  dungeon-failed: '&c&lDUNGEON FAILED!'
+  cooldown: '&cYou must wait &e%time% &cbefore entering another dungeon.'
+  time-warning: '&eWarning: Only &c%time% &eremaining!'
+  time-expired: '&cTime has expired! Teleporting out...'
+  party-invite: '&a%player% &ehas invited you to their party!'
+  party-joined: '&a%player% &ehas joined the party!'
+  party-left: '&c%player% &ehas left the party!'
+  party-full: '&cThe party is full!'
+  no-permission: '&cYou do not have permission to do that!'
+  dungeon-not-found: '&cDungeon not found!'
+  already-in-dungeon: '&cYou are already in a dungeon!'
+  must-be-party-leader: '&cOnly the party leader can start dungeons!'

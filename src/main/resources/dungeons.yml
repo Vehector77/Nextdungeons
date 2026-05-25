@@ -1,0 +1,29 @@
+# Dungeons Configuration
+# Define your custom dungeons here
+
+dungeons:
+  example_dungeon:
+    name: '&6&lExample Dungeon'
+    description:
+      - 'A basic example dungeon'
+      - 'Perfect for beginners!'
+    difficulty: 'EASY'
+    min-players: 1
+    max-players: 4
+    time-limit: 1200
+    cooldown: 300
+    schematic: 'example_dungeon'
+    enabled: true
+    
+  hard_dungeon:
+    name: '&c&lHard Dungeon'
+    description:
+      - 'A challenging dungeon'
+      - 'For experienced players'
+    difficulty: 'HARD'
+    min-players: 2
+    max-players: 5
+    time-limit: 1800
+    cooldown: 600
+    schematic: 'hard_dungeon'
+    enabled: true

@@ -1,0 +1,30 @@
+# Messages Configuration
+# Customize all plugin messages
+
+messages:
+  prefix: '&8[&6NextDungeons&8] '
+  
+  dungeon:
+    enter: '&aYou have entered the dungeon!'
+    exit: '&cYou have left the dungeon!'
+    complete: '&a&lDUNGEON COMPLETE!'
+    failed: '&c&lDUNGEON FAILED!'
+    not-found: '&cDungeon not found!'
+    already-in: '&cYou are already in a dungeon!'
+  
+  cooldown:
+    active: '&cYou must wait &e%time% &cbefore entering another dungeon.'
+  
+  time:
+    warning: '&eWarning: Only &c%time% &eremaining!'
+    expired: '&cTime has expired! Teleporting out...'
+  
+  party:
+    invite: '&a%player% &ehas invited you to their party!'
+    joined: '&a%player% &ehas joined the party!'
+    left: '&c%player% &ehas left the party!'
+    full: '&cThe party is full!'
+    must-be-leader: '&cOnly the party leader can start dungeons!'
+  
+  general:
+    no-permission: '&cYou do not have permission to do that!'

@@ -1,0 +1,38 @@
+name: NextDungeons
+version: 1.0.0
+main: com.nextdungeons.plugin.NextDungeons
+api-version: 1.21
+author: YourName
+description: Advanced dungeon system with MythicMobs and FAWE integration
+website: https://yourwebsite.com
+
+softdepend: [Vault, PlaceholderAPI, MythicMobs, CMI, FastAsyncWorldEdit]
+
+commands:
+  dungeons:
+    description: Main dungeon command
+    usage: /dungeons
+    aliases: [dungeon, dg]
+  dungeonadmin:
+    description: Admin commands for dungeons
+    usage: /dungeonadmin <args>
+    aliases: [dgadmin, da]
+    permission: nextdungeons.admin
+  party:
+    description: Party management commands
+    usage: /party <create|invite|accept|kick|leave|list>
+    aliases: [p]
+
+permissions:
+  nextdungeons.admin:
+    description: Access to admin commands
+    default: op
+  nextdungeons.use:
+    description: Access to use dungeons
+    default: true
+  nextdungeons.create:
+    description: Create dungeon structures
+    default: op
+  nextdungeons.party:
+    description: Use party system
+    default: true
