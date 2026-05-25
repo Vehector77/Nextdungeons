@@ -1,38 +1,61 @@
 name: NextDungeons
-version: 1.0.0
+version: 2.0.0
+description: Advanced dungeon system with classes, quests, waves, and more
+author: Vehector77
 main: com.nextdungeons.plugin.NextDungeons
-api-version: 1.21
-author: YourName
-description: Advanced dungeon system with MythicMobs and FAWE integration
-website: https://yourwebsite.com
+api-version: "1.21"
 
-softdepend: [Vault, PlaceholderAPI, MythicMobs, CMI, FastAsyncWorldEdit]
+softdepend:
+  - Vault
+  - PlaceholderAPI
+  - MythicMobs
+  - FastAsyncWorldEdit
+  - CMI
+  - Citizens
 
 commands:
   dungeons:
-    description: Main dungeon command
-    usage: /dungeons
-    aliases: [dungeon, dg]
+    description: Open dungeons menu or enter a dungeon
+    usage: /dungeons [dungeon_id]
+    permission: nextdungeons.use
   dungeonadmin:
-    description: Admin commands for dungeons
-    usage: /dungeonadmin <args>
-    aliases: [dgadmin, da]
+    description: Dungeon administration commands
+    usage: /dungeonadmin <action>
     permission: nextdungeons.admin
   party:
     description: Party management commands
-    usage: /party <create|invite|accept|kick|leave|list>
-    aliases: [p]
+    usage: /party <action>
+    permission: nextdungeons.party
+  class:
+    description: Class management commands
+    usage: /class <action>
+    permission: nextdungeons.use
+  quest:
+    description: Quest management commands
+    usage: /quest <action>
+    permission: nextdungeons.use
+  leaderboard:
+    description: View leaderboards
+    usage: /leaderboard [type] [page]
+    permission: nextdungeons.use
 
 permissions:
-  nextdungeons.admin:
-    description: Access to admin commands
-    default: op
+  nextdungeons.*:
+    description: All NextDungeons permissions
+    default: false
+    children:
+      nextdungeons.use: true
+      nextdungeons.party: true
+      nextdungeons.admin: true
   nextdungeons.use:
-    description: Access to use dungeons
+    description: Use dungeons
     default: true
-  nextdungeons.create:
-    description: Create dungeon structures
-    default: op
   nextdungeons.party:
     description: Use party system
+    default: true
+  nextdungeons.admin:
+    description: Admin commands
+    default: op
+  nextdungeons.class.*:
+    description: All class permissions
     default: true
